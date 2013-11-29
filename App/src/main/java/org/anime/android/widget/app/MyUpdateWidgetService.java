@@ -23,7 +23,6 @@ public class MyUpdateWidgetService extends Service {
      */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        //TODO do something useful
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
                 .getApplicationContext());
         int[] allWidgetIds = intent
