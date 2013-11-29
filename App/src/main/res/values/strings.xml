@@ -2,7 +2,16 @@
 <resources>
 
     <string name="app_name">AnimeAndroidWidget</string>
+    <string name="app_act_name">Anime Android App</string>
+    <string name="app_name_widget">Anime Android Widget</string>
+    <string name="app_name_lockscreen">Anime A.L.S</string>
+    <string name="service_name">Anime Android Service</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="hide_me"></string>
+    <string name="visibility_1_vis"></string>
+    <string name="visibility_1_invis"></string>
+    <string name="visibility_1_gone"></string>
 
 </resources>

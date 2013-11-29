@@ -13,15 +13,44 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+
         <activity
-            android:name="org.anime.android.widget.app.MainActivity"
-            android:label="@string/app_name" >
+            android:name="org.anime.android.widget.app.AndroidMergeSurfaceView"
+            android:label="@string/app_act_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".MyUpdateWidgetService"
+            android:icon="@drawable/icon"
+            android:label="@string/service_name" >
+        </service>
+
+        <receiver
+            android:label="@string/app_name_widget"
+            android:name="org.anime.android.widget.app.MyWidgetProvider" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <receiver
+            android:label="@string/app_name_lockscreen"
+            android:name=".MyWidgetLockScreenProvider" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_lockscreen_info" />
+        </receiver>
+
     </application>
 
 </manifest>
